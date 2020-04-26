@@ -6,7 +6,7 @@ T5 based model to translate text into Donald Trump's characteristic style.
 
 We use a novel back-translation scheme for unsupervised style transfer.
 
-We use a pair of pretrained neural machine translation models[0] to round trip translate a corpus of text samples from the style target, in our case Donald J. Trump. We then train a subervised text to text model (based on T5[1]) to map the round-trip normalized text samples back to the originals. By adjusting the model's temperature parameter at inference time we can affect the strength of the style transfer. We consider the increasing incoherence with greater temperature to be a positive feature of this technique. 
+We use a pair of pretrained neural machine translation models[0] to round trip translate a corpus of text samples[1] from the style target, in our case Donald J. Trump. We then train a subervised text to text model (based on T5[2]) to map the round-trip normalized text samples back to the originals. By adjusting the model's temperature parameter at inference time we can affect the strength of the style transfer. We consider the increasing incoherence with greater temperature to be a positive feature of this technique. 
 
 ## Some Examples
 
@@ -38,6 +38,8 @@ Licensed under the Apache 2.0 license. See LICENSE.txt for details.
 ## References 
 
 [0] [Scaling Neural Machine Translation](https://arxiv.org/pdf/1806.00187.pdf) ([github](https://github.com/pytorch/fairseq/tree/master/examples/translation))  
-[1][Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)([colab](https://colab.research.google.com/github/google-research/text-to-text-transfer-transformer/blob/master/notebooks/t5-trivia.ipynb))
+[1] [Trump Campaign Corpus](https://github.com/unendin/Trump_Campaign_Corpus)  
+[2] [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)([colab](https://colab.research.google.com/github/google-research/text-to-text-transfer-transformer/blob/master/notebooks/t5-trivia.ipynb))  
+
 
 
