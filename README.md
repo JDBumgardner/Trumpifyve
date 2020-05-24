@@ -6,7 +6,7 @@ T5 based model to translate text into Donald Trump's characteristic style.
 
 We use a novel back-translation scheme for unsupervised style transfer.
 
-We use a pair of pretrained neural machine translation models[0] to round trip translate a corpus of text samples[1] from the style target, in our case Donald J. Trump. We then train a subervised text to text model (based on T5[2]) to map the round-trip normalized text samples back to the originals. By adjusting the model's temperature parameter at inference time we can affect the strength of the style transfer. We consider the increasing incoherence with greater temperature to be a positive feature of this technique. 
+We use a pair of pretrained neural machine translation models[0] to round trip translate a corpus of text samples[1] from the style target, in our case Donald J. Trump. We then train a supervised text to text model (based on T5[2]) to map the round-trip normalized text samples back to the originals. By adjusting the model's temperature parameter at inference time we can affect the strength of the style transfer. We consider the increasing incoherence with greater temperature to be a positive feature of this technique. 
 
 ## Some Examples
 
@@ -23,13 +23,16 @@ A: i have had no sexual relations with this woman. horrible.
 
 ## How to Run:
 
-
+[Open and run the saved model](https://colab.research.google.com/github/JDBumgardner/Trumpifyve/blob/master/Trumpifyve_Run_Saved_Model.ipynb) 
 
 
 ## How to train
 
+[Generate data using this colab](https://colab.research.google.com/github/JDBumgardner/Trumpifyve/blob/master/Trumpifyve_Training_Data_Generation.ipynb)
 
+data is saved to your google drive /trump_pairs
 
+[Train a T5 model using this colab](https://colab.research.google.com/github/JDBumgardner/Trumpifyve/blob/master/Trumpifyve_Train.ipynb)
 
 ## License
 
